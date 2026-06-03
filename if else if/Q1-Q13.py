@@ -101,14 +101,14 @@
 
 # ****Question 9****
 # Write a program to input any alphabet and check whether it is vowel or consonant.
-# x=(input("Enter a character:"))
-# if((x>='A' and x<='Z') or (x>='a' and x<='z')):
-#     if(x=='a' or x=='e' or x=='i' or x=='o' or x=='u' or x=='A' or x=='E' or x=="I" or x=='O' or x=='U'):
-#         print("Its a vowel...")
-#     else:
-#         print("Its consonent...")
-# else:
-#     print("its not a aplhabet")
+x=(input("Enter a character:"))
+if((x>='A' and x<='Z') or (x>='a' and x<='z')):
+    if(x=='a' or x=='e' or x=='i' or x=='o' or x=='u' or x=='A' or x=='E' or x=="I" or x=='O' or x=='U'):
+        print("Its a vowel...")
+    else:
+        print("Its consonent...")
+else:
+    print("its not a aplhabet")
 
 # ****Question 10****
 # Write a program to input any character and check whether it is alphabet,digit,space or special character.

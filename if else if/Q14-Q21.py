@@ -81,7 +81,7 @@
 # elif(per>=80):
 #     print("Grade: B")
 # elif(per>=70):
-#     print("Grade: C")
+    # print("Grade: C")
 # elif(per>=60):
 #     print("Grade: D")
 # elif(per>=40):
