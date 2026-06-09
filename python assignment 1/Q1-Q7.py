@@ -143,22 +143,40 @@
 #  1 different vowels in the string” is ugly). Example: When the user enters the string 
 # “It’s Owl Stretching Time,” the program should say that there are 3 different vowels in the string.
 
+# ch=input("Enter a string: ")
+# i=0
+# if('a' in ch or 'A' in ch):
+#     print("a")
+#     i+=1
+# if('e' in ch or 'E' in ch):
+#     print("e")
+#     i+=1
+# if('i' in ch or 'I' in ch):
+#     print("i")
+#     i+=1
+# if('o' in ch or 'O' in ch):
+#     print("o")
+#     i+=1
+# if('u' in ch or 'U' in ch):
+#     print("u")
+#     i+=1
+
+# *******or******not correct
+# ch=input("Enter a string: ")
+# c=0
+# for i in (['a','e','i','o','u','A','E','I','O','U']):
+#     if(i in ch):
+#         print(i)
+#         c+=0
+# print("There are",c,"different vowels in the string")
+
+# *******or**********may be correct.
 ch=input("Enter a string: ")
-i=0
-if('a' in ch or 'A' in ch):
-    print("a")
-    i+=1
-if('e' in ch or 'E' in ch):
-    print("e")
-    i+=1
-if('i' in ch or 'I' in ch):
-    print("i")
-    i+=1
-if('o' in ch or 'O' in ch):
-    print("o")
-    i+=1
-if('u' in ch or 'U' in ch):
-    print("u")
-    i+=1
-print("There is",i,"different vowels in the string")
+t=ch.upper()
+c=0
+for i in (['A','E','I','O','U']):
+    if(i in t):
+        print(i)
+        c+=1
+print("There are",c,"different vowels in the string")
 
