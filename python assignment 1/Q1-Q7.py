@@ -160,21 +160,13 @@
 # if('u' in ch or 'U' in ch):
 #     print("u")
 #     i+=1
-
-# *******or******not correct
-# ch=input("Enter a string: ")
-# c=0
-# for i in (['a','e','i','o','u','A','E','I','O','U']):
-#     if(i in ch):
-#         print(i)
-#         c+=0
-# print("There are",c,"different vowels in the string")
+# print("There are",i,"different vowels in the string")
 
 # *******or**********may be correct.
 ch=input("Enter a string: ")
 t=ch.upper()
 c=0
-for i in (['A','E','I','O','U']):
+for i in ['A','E','I','O','U']:
     if(i in t):
         print(i)
         c+=1
