@@ -166,7 +166,7 @@
 ch=input("Enter a string: ")
 t=ch.upper()
 c=0
-for i in ['A','E','I','O','U']:
+for i in 'AEIOU':
     if(i in t):
         print(i)
         c+=1
