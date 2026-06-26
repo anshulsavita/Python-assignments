@@ -1,3 +1,4 @@
+# --> 52,43
 # *********Question 42***********incomplete
 # Write a Python program to count repeated characters in a string.  
 # Sample string: 'thequickbrownfoxjumpsoverthelazydog'
@@ -192,5 +193,50 @@
 
 # *********Question 61*********
 # Write a Python program to remove duplicate characters of a given string.
-x=input("Enter string:")
+# x=input("Enter string:")
+# t=''
+# for i in range(len(x)):
+#     if(x[i] not in t):
+#         t=t+x[i]
+# print(t)
+
+# ********Question 62 **********
+# Write a Python program to compute sum of digits of a given string.
+# x=input("Enter string with numbers:")
+# s=0
+# for i in x:
+#     if(i>='0' and i<='9'):
+#         s=s+int(i)
+# print(s)
+
+# *********Question 63**********
+# Write a Python program to remove leading zeros from an IP address.
+# x="192.168.001.001"
+# x=x.split('.')
+# for i in range(len(x)):
+#     x[i]=x[i].lstrip('0')
+# print(".".join(x))
+
+# ********Question 64**********
+# Write a Python program to find maximum length of consecutive 0's in a given binary string.
+# x="10000100100000"
+# x=x.split('1')
+# max=len(x[0])
+# for i in range(len(x)):
+#     if(len(x[i])>max):
+#         max=len(x[i])
+# print(max)
+
+# *******Question 65**********
+# Write a Python program to find all the common characters in lexicographical order from two given lower case strings. If there are no common letters print "No common characters".
+x1=input("Enter first string:")
+x2=input("Enter second string:")
+x1=x1.lower()
+x2=x2.lower()
+i=97
+while(i<=122):
+    if(chr(i) in x1 and chr(i) in x2):
+        print(chr(i))
+    i=i+1
+
 
