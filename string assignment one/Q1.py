@@ -101,7 +101,7 @@
 
 # x=input("Enter string:")
 # t=x.capitalize()
-# print(t)
+# print(t) 
 
 
 # ***(4) if a word consists entirely of capitals, except for the first letter which is lower case, then the case of the letters in the word is reversed
