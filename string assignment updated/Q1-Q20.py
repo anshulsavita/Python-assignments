@@ -13,6 +13,13 @@
 #         c=t.count(i)
 #         print(i,": ",c,sep='')
 
+# x='google.com'
+# t=[]
+# for v in x:
+#     if(v not in t):
+#         t.append(v)
+# for v in t:
+#     print(v,":",x.)
 # *********Question 3********
 # Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead of the empty string.  Sample String : 'w3resource'
 # Expected Result : 'w3ce'
@@ -89,9 +96,12 @@
 # x=input("Enter string:")
 # x=x.split(' ')
 # max=len(x[0])
+# strmax=x[0]
 # for i in x:
 #     if(len(i)>max):
 #         max=len(i)
+#         strmax=x[i]
+
 # k="Longest word: %s\nLength of the longest word: %d"%(i,max)
 # print(k)
 
@@ -212,10 +222,10 @@
 
 # *********Question 20 **********
 # Write a Python function to reverses a string if it's length is a multiple of 4.
-x=input("Enter string:")
-if(len(x)%4==0):
-    x=x[len(x)-1::-1]
-    print(x)
-else:
-    print("length of string is not a multiple of 4...")
+# x=input("Enter string:")
+# if(len(x)%4==0):
+#     x=x[len(x)-1::-1]
+#     print(x)
+# else:
+#     print("length of string is not a multiple of 4...")
 
