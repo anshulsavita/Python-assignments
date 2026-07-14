@@ -1,4 +1,4 @@
-# 15,26,27,43,52
+# 15,26,27,43,52,66,69,74,75,76,80,82,83,85,92,95
 # *********Question 1*******
 # Write a python program to calculate the length of a string.
 # x=input("Enter string:")

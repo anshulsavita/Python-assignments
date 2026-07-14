@@ -1,3 +1,4 @@
+# 66 69 74 75 76 80 82 83 85 92 95
 # *********Question 66 *********incomplete
 #  Write a Python program to make two given strings (lower case, may or may not be of the same length) anagrams removing any characters from any of the strings.
 # x=[]
@@ -151,7 +152,7 @@
 # print(max)
 # print(min)
 
-# ***********Question 80 ************
+# ***********Question 80************incomplte
 # Write a Python program to count number of substrings with same first and last characters of a given string.
 
 # ***********Question 81 ***********
@@ -164,7 +165,7 @@
 # else:
 #     print("Not found...")
 
-# **********Question 82 **********
+# **********Question 82 **********incompelte
 # Write a Python program to wrap a given string into a paragraph of given width.  
 # Sample Output:
 # Input a string: The quick brown fox.
@@ -176,7 +177,7 @@
 # n=int(input("Enter width:"))
 # print(x[:n])
 
-# **********Question 83**********
+# **********Question 83 **********incompelte
 #  Write a Python program to print four values decimal, octal, hexadecimal (capitalized), binary in a single line of a given integer.  
 # Sample Output:
 # Input an integer: 25
@@ -200,7 +201,7 @@
 #     t=t+v
 # print(t)
 
-# *********Question 85 ***********incomplete..
+# *********Question 85***********incomplete..
 # Write a Python program to convert a given Bytearray to Hexadecimal string.  
 # Sample Output:
 # Original Bytearray :
@@ -298,7 +299,7 @@
 # k=",".join(t)
 # print(k)
 
-# **********Question 92 ***********
+# **********Question 92 ***********incomplete
 # Write a Python program to find the string similarity between two given strings.
 
 # *********Question 93 **********
