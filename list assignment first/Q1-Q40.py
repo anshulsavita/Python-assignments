@@ -135,7 +135,7 @@
 #         t.append(i)
 # print(t)
 
-# *******Question 15 *******
+# *******Question 15 *******incomplete
 # Write a Python program to shuffle and print a specified list. 
 
 # *******Question 16 *******
@@ -155,7 +155,7 @@
 #     l.append(t)
 # print(l[5:])
 
-# ********Question 18 *******
+# ********Question 18 *******incomplete
 # Write a Python program to generate all permutations of a list in Python.
 
 # ********Question 19 *******
@@ -187,3 +187,187 @@
 
 # *********Question 23 *********
 # Write a Python program to flatten a shallow list.
+# l=[1,[2,3],4,[5,6]]
+# t1=[]
+# for i in l:
+#     if(isinstance(i,list)):
+#         t1.extend(i)
+#     else:
+#         t1.append(i)
+# print(t1)
+
+# *********Question 24 ********
+# Write a Python program to append a list to the second list.
+# l1=[1,2,3]
+# l2=[4,5,6]
+# l2.extend(l1)
+# print(l2)
+
+# **********Question 25 ********incomplte.
+#  Write a Python program to select an item randomly from a list.
+
+# *********Question 26************
+# Write a python program to check whether two lists are circularly identical.
+# l=[1,2,3,4]
+# l2=[3,4,1,2]
+# c=False
+# for i in range(len(l)):
+#     t=l[0]
+#     l.remove(l[0])
+#     l.append(t)
+#     if(l==l2):
+#         c=True
+#         break
+
+# if(c==True):
+#     print(f"Yes..,{l} and {l2} are circularly identical.")
+# else:
+#     print(f"No..,{l} and {l2} are not circularly identical.")
+
+# ********Question 27 ************
+#  Write a Python program to find the second smallest number in a list.
+# l=[4,7,9,4,2,7,8]
+# t=[]
+# for i in l:
+#     if(i not in t):
+#         t.append(i)
+# t.sort()
+# print(t)
+# print(t[1])
+
+# ***********Question 28 *********
+# Write a Python program to find the second largest number in a list.
+# l=[4,7,9,4,2,7,8]
+# t=[]
+# for i in l:
+#     if(i not in t):
+#         t.append(i)
+# t.sort()
+# print(t)
+# print(t[len(t)-2])
+
+# *********Question 29 **********
+# Write a Python program to get unique values from a list.
+# l=[4,7,9,4,2,7,8]
+# t=[]
+# for i in l:
+#     if(i not in t):
+#         t.append(i)
+# print(t)
+
+# *********Question 30 ***************
+# Write a Python program to get the frequency of the elements in a list. 
+# l=[2,2,5,6,7,7,5,4,9,7,9,0,4]
+# t=[]
+# for i in l:
+#     if(i not in t):
+#         t.append(i)
+#         c=l.count(i)
+#         print(f"{i}= {c}")
+
+# **********Question 31 *********
+# Write a Python program to count the number of elements in a list within a specified range.
+# l=[3,6,8,45,32,12,14,22,30]
+# t=[]
+# i=int(input("Enter starting range:"))
+# j=int(input("Enter ending range:"))
+# for v in l:
+#     if(v>=i and v <=j):
+#         t.append(v)
+# print(t)
+
+# *********Question 32 **********
+#  Write a Python program to check whether a list contains a sublist.
+# l=[1,[1,2],3,4,[5,6]]
+# c=False
+# for i in l:
+#     if(isinstance(i,list)):
+#         c=True
+#         break
+# if(c==True):
+#     print(f"Yes..List contains a sublist.")
+# else:
+#     print(f"No..List does not contain a sublist.")
+
+# *********Question 33 *********
+# Write a Python program to generate all sublists of a list.
+# l=[1,[1,2],3,4,[5,6]]
+# t=[]
+# for i in l:
+#     if(isinstance(i,list)):
+#         t.append(i)
+# print(t)
+
+# ************Question 34 **********recheck
+# Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.  
+# l=[]
+# x=int(input("Enter number:"))
+# for i in range(2,x):
+#     if(i%2!=0):
+#         l.append(i)
+# print(l)
+
+# *************Question 35 ***********
+# Write a Python program to create a list by concatenating a given list which range goes from 1 to n.  
+# Sample list : ['p', 'q']
+# n =5
+# Sample Output : ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', 'p4', 'q4', 'p5', 'q5']
+
+# l=['p','q']
+# t=[]
+# n=int(input("Enter number:"))
+# for i in range(1,n+1):
+#     for j in range(len(l)):
+#         x=l[j]+str(i)
+#         t.append(x)
+# print(t)
+
+# ***************Question 36 ***********recheck
+# Write a Python program to get variable unique identification number or string.
+# l=[1,'Anshul',8,'Abcd']
+# for i in l:
+#     print(id(i))
+
+# ************Question 37 ***********
+# Write a Python program to find common items from two lists. 
+# l=[1,2,3,4,5]
+# l2=[4,5,6,7,8]
+# t=[]
+# for i in l:
+#     if(i in l2):
+#         t.append(i)
+# print(t)
+
+# **********Question 38 ***********
+# Write a Python program to change the position of every n-th value with the (n+1)th in a list. 
+# l=[0,1,2,3,4,5]
+# for i in range(0,len(l)-1,2):
+#     t=l[i]
+#     l[i]=l[i+1]
+#     l[i+1]=t
+# print(l)
+
+# ***********Question 39 *********
+# Write a Python program to convert a list of multiple integers into a single integer.
+# l=[11,33,50]
+# t=''
+# for i in l:
+#     t=t+str(i)
+# print(int(t))
+
+# ************Question 40 **********
+# Write a Python program to split a list based on first character of word.
+l=['Apple','Anshul','Bat','Bomb','Cat','Cow']
+t1=''
+l1=[]
+for i in l:
+    if(i not in t1):
+        x=i[0]
+        t=[]
+        for j in l:
+            if (j not in t1):
+                if(j.startswith(x)):
+                    t.append(j)
+                    t1=t1+j
+        l1.append(t)
+print(l1)
