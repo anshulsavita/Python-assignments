@@ -1,14 +1,27 @@
-# 66 69 74 75 76 80 82 83 85 92 95
+# 69 74 75 76 77 80 83 85 92 95
 # *********Question 66 *********incomplete
 #  Write a Python program to make two given strings (lower case, may or may not be of the same length) anagrams removing any characters from any of the strings.
-# x=[]
-# y=[]
-# for i in range(2):
-#     v=input(f"Enter string @ {i}:")
-#     x.append(v)
-# for i in range(len(x[0])):
-    
-# print(y)
+# x1=input("Enter first string:")
+# x2=input("Enter second string:")
+# t=''
+
+# for i in x1:
+#     if(i not in t):
+#         t=t+i
+#         if(i in x2):
+#             c1=x1.count(i)
+#             c2=x2.count(i) 
+#             if(c1 > c2):    
+#                 x1=x1.replace(i,'',c1-c2)
+#             elif(c2>c1):
+#                 x2=x2.replace(i,'',c2-c1)
+#         else:
+#             x1=x1.replace(i,'')
+# for i in x2:
+#      if (i not in x1):
+#           x2=x2.replace(i,'')
+# print(x1)
+# print(x2)
 
 # ***********Question 67 ************
 # Write a Python program to remove all consecutive duplicates of a given string.
@@ -43,8 +56,19 @@
 # Write a Python program to find the longest common sub-string from two given strings.
 # x1=input("Enter string:")
 # x2=input("Enter string:")
+# t=''
 # l=[]
-# for i in range(len(x1))
+# for i in range(len(x1)-1):
+#     if(x1[i] in x2):
+#         c=x2.find(x1[i])
+#         if(c==len(x2)): break
+#         if (x1[i+1]==x2[c+1]):
+#             t=t+x1[i]
+#             l.append(t)
+# m=max(l)
+# print(m)
+
+
 
 # *********Question 70 ************
 # Write a Python program to create a string from two given strings concatenating uncommon characters of the said strings.
@@ -124,7 +148,7 @@
 # Write a Python program to count number of non-empty substrings of a given string.
 # x=input("Enter string:")
 # l=len(x)
-# t=l*(l+1)/-2
+# t=l*(l+1)//2
 # print(t)
 
 # ********* Question 78 ********
@@ -165,7 +189,7 @@
 # else:
 #     print("Not found...")
 
-# **********Question 82 **********incompelte
+# **********Question 82 **********
 # Write a Python program to wrap a given string into a paragraph of given width.  
 # Sample Output:
 # Input a string: The quick brown fox.
@@ -175,8 +199,16 @@
 
 # x=input("Enter string:")
 # n=int(input("Enter width:"))
-# print(x[:n])
-
+# i=0
+# while(i<=len(x)):
+#     j=0
+#     while(j<=n):
+#         if(i<len(x)):
+#             print(x[i],end='')
+#         j=j+1
+#         i=i+1
+#     print()
+    
 # **********Question 83 **********incompelte
 #  Write a Python program to print four values decimal, octal, hexadecimal (capitalized), binary in a single line of a given integer.  
 # Sample Output:
@@ -208,6 +240,14 @@
 # [111, 12, 45, 67, 109]
 # Hexadecimal string:
 # 6f0c2d436d
+
+# l=[111,12,45,67,109]
+# t=''
+# for i in l:
+#     c=hex(i)
+#     t=t+str(c)
+#     t=t.replace('x','')
+# print(t)
 
 # **********Qyestion 86 ***********
 # Write a Python program to delete all occurrences of a specified character in a given string. 
@@ -299,8 +339,17 @@
 # k=",".join(t)
 # print(k)
 
-# **********Question 92 ***********incomplete
+# **********Question 92 ***********recheck.
 # Write a Python program to find the string similarity between two given strings.
+# x=input("Enter first string:")
+# x2=input("Enter second string:")
+# t=''
+# for i in x:
+#     if(i in x2):
+#         t=t+i
+# print(t)
+
+
 
 # *********Question 93 **********
 # Write a Python program to extract numbers from a given string.
@@ -395,11 +444,11 @@
 # **********Question 101********
 # Write a Python program to add two strings as they are numbers (Positive integer values). Return a message if the numbers are string.
 
-x = input("Enter string 1: ")
-x1 = input("Enter string 2: ")
+# x = input("Enter string 1: ")
+# x1 = input("Enter string 2: ")
 
-if x.isnumeric() and x1.isnumeric():
-    s = int(x) + int(x1)
-    print(s)
-else:
-    print("Error in input!")
+# if x.isnumeric() and x1.isnumeric():
+#     s = int(x) + int(x1)
+#     print(s)
+# else:
+#     print("Error in input!")

@@ -1,5 +1,5 @@
 # --> 52,43
-# *********Question 42***********incomplete
+# *********Question 42***********
 # Write a Python program to count repeated characters in a string.  
 # Sample string: 'thequickbrownfoxjumpsoverthelazydog'
 # Expected output :
@@ -8,12 +8,14 @@
 # u 2
 
 # x=input("Enter string:")
-# x=sorted(x)
+# t=''
 # for i in x:
-#     c=x.count(i)
+#     if(i not in t):
+#         c=x.count(i)
+#         t=t+i
 #     if(c>1):
 #         print("%s: %d"%(i,c))
-
+    
 # ***********Question 43 ***********incomplete
 # Write a Python program to print the square and cube symbol in the area of a rectangle and volume of a cylinder.  
 # Sample output:
@@ -229,14 +231,14 @@
 
 # *******Question 65**********
 # Write a Python program to find all the common characters in lexicographical order from two given lower case strings. If there are no common letters print "No common characters".
-x1=input("Enter first string:")
-x2=input("Enter second string:")
-x1=x1.lower()
-x2=x2.lower()
-i=97
-while(i<=122):
-    if(chr(i) in x1 and chr(i) in x2):
-        print(chr(i))
-    i=i+1
+# x1=input("Enter first string:")
+# x2=input("Enter second string:")
+# x1=x1.lower()
+# x2=x2.lower()
+# i=97
+# while(i<=122):
+#     if(chr(i) in x1 and chr(i) in x2):
+#         print(chr(i))
+#     i=i+1
 
 

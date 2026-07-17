@@ -1,4 +1,3 @@
-# 26,27
 # ********Question 21**********
 # Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters. 
 # x=input("Enter string:")
@@ -46,7 +45,7 @@
 #         i=ord(i)+3
 #     print(chr(i),end='')
 
-# ********Question 26*********incomplete
+# ********Question 26*********
 # Write a Python program to display formatted text (width=50) as output.
 # x="Python is a very popular programming language used for web development, data science, artificial intelligence and automation"
 # x=x.split(' ')
@@ -57,6 +56,9 @@
 
 # ********Question 27********incomplete
 # Write a Python program to remove existing indentation from all of the lines in a given text.
+# x="anshul-savita-rohit-ashwini"
+# r=x.replace('-','')
+# print(r)
 
 # *******Question 28********
 # Write a Python program to add a prefix text to all of the lines in a string.
@@ -157,6 +159,6 @@
 # *******Question 41*******
 # Write a Python program to strip a set of characters from a string.
 # example --> #####anshul####
-x=input("Enter string")
-n=input("Enter u want to strip:")
-print(x.strip(n))
+# x=input("Enter string")
+# n=input("Enter u want to strip:")
+# print(x.strip(n))
