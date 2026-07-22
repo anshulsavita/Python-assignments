@@ -22,6 +22,8 @@
 # The area of the rectangle is 1256.66cm2
 # The volume of the cylinder is 1254.725cm3
 
+print("1256.66cm"chr(178))
+
 # ********Question 44 ***********
 # Write a Python program to print the index of the character in a string.  
 # Sample string: w3resource

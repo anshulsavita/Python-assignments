@@ -215,6 +215,17 @@
 # Input an integer: 25
 # Decimal Octal Hexadecimal (capitalized), Binary
 # 25 31 19 11001
+# x=int("1011",2) #binory to decimal or other
+# print(x)
+
+# k=oct(567) decimal to octal
+# print(k)
+
+# k=hex(307) #decimal to hexa
+# print(k)
+
+# k=bin(25) #decimal to hexa
+# print(k)
 
 # ********Question 84 ************
 # Write a Python program to swap cases of a given string.  

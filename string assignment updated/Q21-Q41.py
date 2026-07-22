@@ -54,7 +54,7 @@
 #     if(i%50==0 and i>1):
 #         print()
 
-# ********Question 27********incomplete
+# ********Question 27********
 # Write a Python program to remove existing indentation from all of the lines in a given text.
 # x="anshul-savita-rohit-ashwini"
 # r=x.replace('-','')
