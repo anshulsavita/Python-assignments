@@ -34,7 +34,26 @@
 # print("Sum of positive numbers:",sum(p))
 # print("Sum of negative numbers:",sum(n))
 
-# **************Question 24***********incomplete...
+# **************Question 24***********
+# Write a Python program to find numbers within a given range where every number is divisible by every digit it contains.  
+# Sample Output:
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
+# x=['11','12','13','14','15','16','17',"18","19","20"]
+# x = range(1, 23)
+# def find(a):
+#     c=0
+#     for j in str(a):
+#         if(int(j)==0):
+#             c=c-1
+#             break
+#         elif(int(a)%int(j)==0):
+#             c=c+1
+#     if(c==len(str(a))):
+#         return a
+
+# x1 = list(filter(lambda i: find(i), x))
+# print(x1)
+# ************Question 25 **************
 # Write a Python program to create the next bigger number by rearranging the digits of a given number.  
 # Original number: 12
 # Next bigger number: 21
@@ -47,7 +66,14 @@
 # Original number: 445
 # Next bigger number: 454
 
-# **************Question 25 ***********
+# from itertools import permutations
+# x=input("Enter number:")
+# l=list(permutations(x))
+# l1=list(map(lambda a:"".join(a),l))
+# f=list(filter(lambda a: int(a)>int(x),l1))
+# print(f[0])
+
+# **************Question 26 ***********
 # Write a Python program to find the list with maximum and minimum length using lambda.  
 # Original list:
 # [[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
@@ -60,11 +86,209 @@
 # print((len(m),m))
 # print((len(mi),mi))
 
-# *************Question 26 *************
+# *************Question 27 *************
 # Write a Python program to sort each sublist of strings in a given list of lists using lambda.  
 # Original list:
 # [['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange']]
 # After sorting each sublist of the said list of lists:
 # [['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]
 
+# l=[['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange']]
+# l1=list(map(lambda a: sorted(a),l))
+# print(l1)
 
+# *************Question 28 **************
+# Write a Python program to sort a given list of lists by length and value using lambda.  
+# Original list:
+# [[2], [0], [1, 3], [0, 7], [9, 11], [13, 15, 17]]
+# Sort the list of lists by length and value:
+# [[0], [2], [0, 7], [1, 3], [9, 11], [13, 15, 17]]
+
+# l = [[2],[0],[1,3],[0,7],[9,11],[13,15,17]]
+# l1 = sorted(l, key=lambda x: (len(x), x))
+# print(l1)
+
+# ***************Question 29 ***************
+# Write a Python program to find the maximum value in a given heterogeneous list using lambda.  
+# Original list:
+# ['Python', 3, 2, 4, 5, 'version']
+# Maximum values in the said list using lambda:
+# 5
+# l=['Python', '3', '2', '4', '5', 'version']
+# l=list(filter(lambda a: int(a.isdigit()),l))
+# print(max(l))
+
+# ************Question 30 ***************
+# Write a Python program to sort a given matrix in ascending order according to the sum of its rows using lambda.  
+# Original Matrix:
+# [[1, 2, 3], [2, 4, 5], [1, 1, 1]]
+# Sort the said matrix in ascending order according to the sum of its rows
+# [[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+# Original Matrix:
+# [[1, 2, 3], [-2, 4, -5], [1, -1, 1]]
+# Sort the said matrix in ascending order according to the sum of its rows
+# [[-2, 4, -5], [1, -1, 1], [1, 2, 3]]
+
+# l=[[1,2,3],[2,4,5],[1,1,1]]
+# l1=sorted(l,key=lambda a:sum(a))
+# print(l1)
+
+# **************Question 31************
+# Write a Python program to extract specified size of strings from a give list of string values using lambda.  
+# Original list:
+# ['Python', 'list', 'exercises', 'practice', 'solution']
+# length of the string to extract:
+# 8
+# After extracting strings of specified length from the said list:
+# ['practice', 'solution']
+
+# l=['Python', 'list', 'exercises', 'practice', 'solution']
+# n=int(input("Enter length:"))
+# l1=list(filter(lambda a: len(a)==n,l))
+# print(l1)
+
+# ************Question 32***************
+# Write a Python program to count float number in a given mixed list using lambda.  
+# Original list:
+# [1, 'abcd', 3.12, 1.2, 4, 'xyz', 5, 'pqr', 7, -5, -12.22]
+# Number of floats in the said mixed list:
+# 3
+c=0
+# l=[1, 'abcd', 3.12, 1.2, 4, 'xyz', 5, 'pqr', 7, -5, -12.22]
+# k=list(map(lambda x: isinstance(x, float),l))
+# k1=k.count(True)
+# print(k1)
+
+# **************Question 33 ****************
+# Write a Python program to check whether a given string contains a capital letter, a lower case letter, a number and a minimum length using lambda.  
+# Input the string: W3resource
+# ['Valid string.']
+# x='W3resource'
+# n=10
+# k=list(map(lambda a: a.isupper() or a.islower or a.isdigit or len(a)==n,x))
+# if(k.count(False)>0):
+#     print('inValid String....')
+# else:
+#     print('Valid String....')
+
+
+# *************Question 34 ******************
+# Write a Python program to filter the height and width of students, which are stored in a dictionary using lambda.  
+# Original Dictionary:
+# {'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)}
+# Height> 6ft and Weight> 70kg:
+# {'Cierra Vega': (6.2, 70)}
+
+# d={'Cierra Vega': (6.2, 70),'Alden Cantrell': (5.9, 65),'Kierra Gentry': (6.0, 68),'Pierre Cox': (5.8, 66)}
+# k=dict(filter(lambda x: x[1][0]>6 and x[1][1]>=70,d.items()))
+# print(k)
+
+# **************Question 35 ******************
+# Write a Python program to check whether a specified list is sorted or not using lambda.  
+# Original list:
+# [1, 2, 4, 6, 8, 10, 12, 14, 16, 17]
+# Is the said list is sorted!
+# True
+# Original list:
+# [1, 2, 4, 6, 8, 10, 12, 14, 16, 17]
+# Is the said list is sorted!
+# False
+
+# l = [1, 2, 4, 6, 8, 10, 12, 14, 16, 17]
+# r = sorted(l, key=lambda x: x)
+# print(l==r)
+
+# ***************Question 36 ****************
+# Write a Python program to extract the nth element from a given list of tuples using lambda.  
+# Original list:
+# [('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)]
+# Extract nth element ( n = 0 ) from the said list of tuples:
+# ['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']
+# Extract nth element ( n = 2 ) from the said list of tuples:
+# [99, 96, 94, 98]
+# l=[('Greyson Fulton', 98, 99),('Brady Kent', 97, 96),('Wyatt Knott', 91, 94),('Beau Turnbull', 94, 98)]
+# n=1
+# k=list(map(lambda a: a[n],l))
+# print(k)
+
+# ************Question 37 ***************
+# Write a Python program to sort a list of lists by a given index of the inner list using lambda.  
+# Original list:
+# [('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)]
+# Sort the said list of lists by a given index ( Index = 0 ) of the inner list
+# [('Beau Turnbull', 94, 98), ('Brady Kent', 97, 96), ('Greyson Fulton', 98, 99), ('Wyatt Knott', 91, 94)]
+# Sort the said list of lists by a given index ( Index = 2 ) of the inner list
+# [('Wyatt Knott', 91, 94), ('Brady Kent', 97, 96), ('Beau Turnbull', 94, 98), ('Greyson Fulton', 98, 99)]
+
+# l=[('Greyson Fulton', 98, 99),('Brady Kent', 97, 96),('Wyatt Knott', 91, 94),('Beau Turnbull', 94, 98)]
+# n=1
+# k=sorted(l,key=lambda a: a[n])
+# print(k)
+
+# ***********Question 38 ***************
+# Write a Python program to remove all elements from a given list present in another list using lambda.  
+# Original lists:
+# list1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# list2: [2, 4, 6, 8]
+# Remove all elements from 'list1' present in 'list2:
+# [1, 3, 5, 7, 9, 10]
+
+# l1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# l2= [2, 4, 6, 8]
+# k=list(filter(lambda x: x not in l2,l1))
+# print(k)
+
+# ************Question 39 **************
+# Write a Python program to find the elements of a given list of strings that contain specific substring using lambda.  
+# Original list:
+# ['red', 'black', 'white', 'green', 'orange']
+# Substring to search:
+# ack
+# Elements of the said list that contain specific substring:
+# ['black']
+# Substring to search:
+# abc
+# Elements of the said list that contain specific substring:
+# []
+
+# l=['red', 'black', 'white', 'green', 'orange']
+# n='ack'
+# k=list(filter(lambda x: n in x,l))
+# print(k)
+
+# ************Question 40 **************
+# Write a Python program to find the nested lists elements, which are present in another list using lambda.  
+# Original lists: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+# [[12, 18, 23, 25, 45], [7, 11, 19, 24, 28], [1, 5, 8, 18, 15, 16]]
+# Intersection of said nested lists:
+# [[12], [7, 11], [1, 5, 8]]
+
+# l1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+# l2=[[12, 18, 23, 25, 45], [7, 11, 19, 24, 28], [1, 5, 8, 18, 15, 16]]
+# k= list(map(lambda x: list(filter(lambda y: y in l1, x)), l2))
+# print(k)
+
+# ************Question 41 *************
+# Write a Python program to reverse strings in a given list of string values using lambda.  
+# Original lists:
+# ['Red', 'Green', 'Blue', 'White', 'Black']
+# Reverse strings of the said given list:
+# ['deR', 'neerG', 'eulB', 'etihW', 'kcalB']
+
+# l=['Red', 'Green', 'Blue', 'White', 'Black']
+# k=list(map(lambda x: x[-1::-1],l))
+# print(k)
+
+# ************Question 42 **************
+# Write a Python program to calculate the product of a given list of numbers using lambda.  
+# list1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Product of the said list numbers:
+# 3628800
+# list2: [2.2, 4.12, 6.6, 8.1, 8.3]
+# Product of the said list numbers:
+# 4021.8599520000007
+
+import functools as ft
+l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+k=ft.reduce(lambda a,b:a*b,l)
+print(k)
