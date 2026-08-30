@@ -1,3 +1,4 @@
+# incomplete --> 46
 # ************Question 21**********
 # Write a Python program that multiply each number of given list with a given number using lambda function. Print the result.  
 # Original list: [2, 4, 6, 9, 11]
@@ -206,6 +207,7 @@ c=0
 # ['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']
 # Extract nth element ( n = 2 ) from the said list of tuples:
 # [99, 96, 94, 98]
+
 # l=[('Greyson Fulton', 98, 99),('Brady Kent', 97, 96),('Wyatt Knott', 91, 94),('Beau Turnbull', 94, 98)]
 # n=1
 # k=list(map(lambda a: a[n],l))
@@ -264,6 +266,7 @@ c=0
 # [[12], [7, 11], [1, 5, 8]]
 
 # l1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
 # l2=[[12, 18, 23, 25, 45], [7, 11, 19, 24, 28], [1, 5, 8, 18, 15, 16]]
 # k= list(map(lambda x: list(filter(lambda y: y in l1, x)), l2))
 # print(k)
@@ -288,7 +291,130 @@ c=0
 # Product of the said list numbers:
 # 4021.8599520000007
 
-import functools as ft
-l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-k=ft.reduce(lambda a,b:a*b,l)
+# import functools as ft
+# l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# k=ft.reduce(lambda a,b:a*b,l)
+# print(k)
+
+# *************Question 43 **************
+# Write a Python program to multiply all the numbers in a given list using lambda.  
+# Original list:
+# [4, 3, 2, 2, -1, 18]
+# Mmultiply all the numbers of the said list: -864
+# Original list:
+# [2, 4, 8, 8, 3, 2, 9]
+# Mmultiply all the numbers of the said list: 27648
+
+# import functools as ft
+# l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# k=ft.reduce(lambda a,b:a*b,l)
+# print(k)
+
+# ************Question 44 ***************
+# Write a Python program to calculate the average value of the numbers in a given tuple of tuples using lambda.  
+# Original Tuple:
+# ((10, 10, 10), (30, 45, 56), (81, 80, 39), (1, 2, 3))
+# Average value of the numbers of the said tuple of tuples:
+# (30.5, 34.25, 27.0)
+# Original Tuple:
+# ((1, 1, -5), (30, -15, 56), (81, -60, -39), (-10, 2, 3))
+# Average value of the numbers of the said tuple of tuples:
+# (25.5, -18.0, 3.75)
+
+# l = ((10, 10, 10), (30, 45, 56), (81, 80, 39), (1, 2, 3))
+# k = tuple(map(lambda i: sum(map(lambda x: x[i], l)) / len(l), range(3)))
+# print(k)
+
+
+# *************Question 45 ******************
+# Write a Python program to convert string element to integer inside a given tuple using lambda.  
+# Original tuple values:
+# (('233', 'ABCD', '33'), ('1416', 'EFGH', '55'), ('2345', 'WERT', '34'))
+# New tuple values:
+# ((233, 33), (1416, 55), (2345, 34))
+
+# l = (('233', 'ABCD', '33'), ('1416', 'EFGH', '55'), ('2345', 'WERT', '34'))
+# k=tuple(map(lambda x: tuple(map(lambda y: int(y), filter(lambda y: y.isdigit(), x))), l))
+# print(k)
+
+# *************Question 46 ************incomplete...
+# Write a Python program to find index position and value of the maximum and minimum values in a given list of numbers using lambda.  
+# Original list:
+# [12, 33, 23, 10.11, 67, 89, 45, 66.7, 23, 12, 11, 10.25, 54]
+# Index position and value of the maximum value of the said list:
+# (5, 89)
+# Index position and value of the minimum value of the said list:
+# (3, 10.11)
+
+# *************Question 47 *************
+# Write a Python program to sort a given mixed list of integers and strings using lambda. Numbers must be sorted before strings.  
+# Original list:
+# [19, 'red', 12, 'green', 'blue', 10, 'white', 'green', 1]
+# Sort the said mixed list of integers and strings:
+# [1, 10, 12, 19, 'blue', 'green', 'green', 'red', 'white']
+
+# l=[19, 'red', 12, 'green', 'blue', 10, 'white', 'green', 1]
+# l1=list(filter(lambda a: str(a).isdigit(),l))
+# l2=list(filter(lambda a: str(a).isalpha(),l))
+# k=sorted(l1)
+# k.extend(sorted(l2))
+# print(k)
+
+# *************Question 48 **************
+# Write a Python program to sort a given list of strings(numbers) numerically using lambda.  
+# Original list:
+# ['4', '12', '45', '7', '0', '100', '200', '-12', '-500']
+# Sort the said list of strings(numbers) numerically:
+# ['-500', '-12', '0', '4', '7', '12', '45', '100', '200']
+
+# l=['4', '12', '45', '7', '0', '100', '200', '-12', '-500']
+# k=sorted(l,key= lambda a: int(a))
+# print(k)
+
+# **************Question 49 *************
+# Write a Python program to count the occurrences of the items in a given list using lambda.  
+# Original list:
+# [3, 4, 5, 8, 0, 3, 8, 5, 0, 3, 1, 5, 2, 3, 4, 2]
+# Count the occurrences of the items in the said list:
+# {3: 4, 4: 2, 5: 3, 8: 2, 0: 2, 1: 1, 2: 2}
+
+# l = [3, 4, 5, 8, 0, 3, 8, 5, 0, 3, 1, 5, 2, 3, 4, 2]
+# k=dict(map(lambda x: (x, l.count(x)),set(l)))
+# print(k)
+
+# *************Question 50 ****************
+# Write a Python program to remove specific words from a given list using lambda.  
+# Original list:
+# ['orange', 'red', 'green', 'blue', 'white', 'black']
+# Remove words:
+# ['orange', 'black']
+# After removing the specified words from the said list:
+# ['red', 'green', 'blue', 'white']
+
+# l1=['orange', 'red', 'green', 'blue', 'white', 'black']
+# l2=['orange', 'black']
+# k=list(filter(lambda x: x not in l2 ,l1))
+# print(k)
+
+# ************Question 51 *************
+# Write a Python program to find the maximum and minimum values in a given list of tuples using lambda function.  
+# Original list with tuples:
+# [('V', 62), ('VI', 68), ('VII', 72), ('VIII', 70), ('IX', 74), ('X', 65)]
+# Maximum and minimum values of the said list of tuples:
+# (74, 62)
+
+# l=[('V', 62), ('VI', 68), ('VII', 72), ('VIII', 70), ('IX', 74), ('X', 65)]
+# k=list(map( lambda x: list(filter(lambda y: str(y).isdigit(),x)),l))
+# print("Minimum",sorted(k[0]))
+# print("Maximum",sorted(k[-2]))
+
+# ************Question 52 *********
+# Write a Python program to remove None value from a given list using lambda function.  
+# Original list:
+# [12, 0, None, 23, None, -55, 234, 89, None, 0, 6, -12]
+# Remove None value from the said list:
+# [12, 0, 23, -55, 234, 89, 0, 6, -12]
+
+l=[12, 0, None, 23, None, -55, 234, 89, None, 0, 6, -12]
+k=list(filter(lambda x: x!=None,l))
 print(k)
