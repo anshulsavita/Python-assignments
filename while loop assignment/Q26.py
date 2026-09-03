@@ -54,7 +54,34 @@
 # print(k)
 
 # **************Question 30 *****************
-n=int(input('Enter number:'))
-for i in range(1,n+1):
-    if(i%2==0):
-        print(f"{i},",end='')
+# n=int(input('Enter number:'))
+# for i in range(1,n+1):
+#     if(i%2==0):
+#         print(f"{i},",end='')
+
+# ***************Question 31***********
+# write a python program to print all Armstrong numbers between 1 to n.
+# n=input("Enter number:")
+# for x in range(1,int(n)+1):
+#     sum=0
+#     for i in str(x):
+#         m=1
+#         for j in range(1,len(str(x))+1):
+#             m=m*int(i)
+#         sum=sum+m
+#     if(sum==x):
+#         print(f"{sum},",end='')
+
+# ***************Question 32 **************
+# Write a python program to print all the perfect numbers between 1 to n.
+# n=int(input("Enter number:"))
+# for j in range(1,n+1):
+#     sum=0
+#     for i in range(1,j):
+#         if(j%i==0):
+#             sum=sum+i
+#     if(sum==j):
+#         print(f"{j},",end='')
+
+# ****************Question 33 *************
+# Write a python program to print all the Strong numbers between 1 to n.
