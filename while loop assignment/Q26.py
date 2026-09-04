@@ -262,23 +262,289 @@
 
 # ***************Question 42 ***************
 # Write a python program to convert Octal to binary number system.
-x='57'
-t=''
-for j in x:
-    if(j=='0'):
-        t=t+'000'
-    elif(j=='1'):
-        t=t+'001'
-    elif(j=='2'):
-        t=t+'010'
-    elif(j=='3'):
-        t=t+'011'
-    elif(j=='4'):
-        t=t+'100'
-    elif(j=='5'):
-        t=t+'101'
-    elif(j=='6'):
-        t=t+'110'
-    elif(j=='7'):
-        t=t+'111'
-print(t)
+# x='57'
+# t=''
+# for j in x:
+#     if(j=='0'):
+#         t=t+'000'
+#     elif(j=='1'):
+#         t=t+'001'
+#     elif(j=='2'):
+#         t=t+'010'
+#     elif(j=='3'):
+#         t=t+'011'
+#     elif(j=='4'):
+#         t=t+'100'
+#     elif(j=='5'):
+#         t=t+'101'
+#     elif(j=='6'):
+#         t=t+'110'
+#     elif(j=='7'):
+#         t=t+'111'
+# print(t)
+
+# ****************Question 43 *************
+# write a python program to convert Octal to Decimal number system.
+# l1=[]
+# t='246'
+# for i in range(0,len(t)):
+#     if(i==0):
+#         l1.append(1)
+#     else:
+#         l1.append((8*l1[i-1]))
+# l1.reverse()
+# total=0
+# for i in range(len(t)):
+#         total=total+(l1[i]*int(t[i]))
+# print(total)
+
+# ******************Question 44 *************
+# write a python program to convert Octal to Hexadecimal number system.
+# x='57'
+# t=''
+# for j in x:
+#     if(j=='0'):
+#         t=t+'000'
+#     elif(j=='1'):
+#         t=t+'001'
+#     elif(j=='2'):
+#         t=t+'010'
+#     elif(j=='3'):
+#         t=t+'011'
+#     elif(j=='4'):
+#         t=t+'100'
+#     elif(j=='5'):
+#         t=t+'101'
+#     elif(j=='6'):
+#         t=t+'110'
+#     elif(j=='7'):
+#         t=t+'111'
+# if(len(t)%4!=0):
+#     while(len(t)%4!=0):
+#         t=t.rjust(len(t)+1,'0')
+# i=0
+# l1=[]
+# while(i<len(t)):
+#     l2=[]
+#     for j in range(i,i+4):
+#         l2.append(t[j])
+#         i+=1
+#     if("".join(l2)=='0000'):
+#         l1.append('0')
+#     elif("".join(l2)=='0001'):
+#         l1.append('1')
+#     elif("".join(l2)=='0010'):
+#         l1.append('2')
+#     elif("".join(l2)=='0011'):
+#         l1.append('3')
+#     elif("".join(l2)=='0100'):
+#         l1.append('4')
+#     elif("".join(l2)=='0101'):
+#         l1.append('5')
+#     elif("".join(l2)=='0110'):
+#         l1.append('6')
+#     elif("".join(l2)=='0111'):
+#         l1.append('7')
+#     elif("".join(l2)=='1000'):
+#         l1.append('8')
+#     elif("".join(l2)=='1001'):
+#         l1.append('9')
+#     elif("".join(l2)=='1010'):
+#         l1.append('A')
+#     elif("".join(l2)=='1011'):
+#         l1.append('B')
+#     elif("".join(l2)=='1100'):
+#         l1.append('C')
+#     elif("".join(l2)=='1101'):
+#         l1.append('D')
+#     elif("".join(l2)=='1110'):
+#         l1.append('E')
+#     elif("".join(l2)=='1111'):
+#         l1.append('F')
+# print("".join(l1))
+
+# ************Question 45 *************
+# write a python program to convert Decimal to Binary number system.
+# x=25
+# l1=[]
+# while(x>0):
+#     r=x%2
+#     x=x//2
+#     l1.append(str(r))
+# l1.reverse()
+# print(''.join(l1))
+
+# **************Question 46 **************
+# write a python program to convert Decimal to Octal number system.
+# x=125
+# l1=[]
+# while(x>0):
+#     r=x%8
+#     x=x//8
+#     l1.append(str(r))
+# l1.reverse()
+# print(''.join(l1))
+
+# **************Question 47 ************
+# write a python program to convert Decimal to Hexadecimal number system.
+# x=254
+# l1=[]
+# while(x>0):
+#     r=x%16
+#     x=x//16
+#     l1.append(str(r))
+# l1.reverse()
+# t=''
+# for i in l1:
+#     if(int(i)>=0 and int(i)<=9):
+#         t=t+i
+#     elif(int(i)==10):
+#         t=t+'A'
+#     elif(int(i)==11):
+#         t=t+'B'
+#     elif(int(i)==12):
+#         t=t+'C'
+#     elif(int(i)==13):
+#         t=t+'D'
+#     elif(int(i)==14):
+#         t=t+'E'
+#     elif(int(i)==15):
+#         t=t+'F'
+# print(t)
+
+# ***************Question 48 *************
+# write a python program to convert Hexadecimal to binary number system.
+# x='2F'
+# l=[]
+# for i in x:
+#     if(i=='0'):
+#         l.append('0000')
+#     elif(i=='1'):
+#         l.append('0001')
+#     elif(i=='2'):
+#         l.append('0010')
+#     elif(i=='3'):
+#         l.append('0011')
+#     elif(i=='4'):
+#         l.append('0100')
+#     elif(i=='5'):
+#         l.append('0101')
+#     elif(i=='6'):
+#         l.append('0110')
+#     elif(i=='7'):
+#         l.append('0111')
+#     elif(i==8):
+#         l.append('1000')
+#     elif(i==9):
+#         l.append('1001')
+#     elif(i=='A'):
+#         l.append('1010')
+#     elif(i=='B'):
+#         l.append('1011')
+#     elif(i=='C'):
+#         l.append('1100')
+#     elif(i=='D'):
+#         l.append('1101')
+#     elif(i=='E'):
+#         l.append('1110')
+#     elif(i=='F'):
+#         l.append('1111')
+# print("".join(l))
+
+# ****************Question 49 ************
+# Write a python program to convert Hexadecimal to octal number system.
+# x='2F'
+# l=[]
+# for i in x:
+#     if(i=='0'):
+#         l.append('0000')
+#     elif(i=='1'):
+#         l.append('0001')
+#     elif(i=='2'):
+#         l.append('0010')
+#     elif(i=='3'):
+#         l.append('0011')
+#     elif(i=='4'):
+#         l.append('0100')
+#     elif(i=='5'):
+#         l.append('0101')
+#     elif(i=='6'):
+#         l.append('0110')
+#     elif(i=='7'):
+#         l.append('0111')
+#     elif(i==8):
+#         l.append('1000')
+#     elif(i==9):
+#         l.append('1001')
+#     elif(i=='A'):
+#         l.append('1010')
+#     elif(i=='B'):
+#         l.append('1011')
+#     elif(i=='C'):
+#         l.append('1100')
+#     elif(i=='D'):
+#         l.append('1101')
+#     elif(i=='E'):
+#         l.append('1110')
+#     elif(i=='F'):
+#         l.append('1111')
+# x="".join(l)
+# if(len(x)%3!=0):
+#     t=True
+#     while(len(x)%3!=0):
+#         x=x.rjust(len(x)+1,'0')
+# i=0
+# l1=[]
+# while(i<len(x)):
+#     l2=[]
+#     for j in range(i,i+3):
+#         l2.append(x[j])
+#         i+=1
+#     if("".join(l2)=='000'):
+#         l1.append('0')
+#     elif("".join(l2)=='001'):
+#         l1.append('1')
+#     elif("".join(l2)=='010'):
+#             l1.append('2')
+#     elif("".join(l2)=='011'):
+#             l1.append('3')
+#     elif("".join(l2)=='100'):
+#             l1.append('4')
+#     elif("".join(l2)=='101'):
+#             l1.append('5')
+#     elif("".join(l2)=='110'):
+#             l1.append('6')
+#     elif("".join(l2)=='111'):
+#             l1.append('7')
+# print("".join(l1))
+
+# ************Question 50 ****************
+# write a python program to convert Hexadecimal to Decimal number system.
+# l1=[]
+# t='1A3'
+# for i in range(0,len(t)):
+#     if(i==0):
+#         l1.append(1)
+#     else:
+#         l1.append((16*l1[i-1]))
+# l1.reverse()
+# total=0
+# for i in range(len(t)):
+#         if(t[i]>='0' and t[i]<='9'):
+#             total=total+(l1[i]*int(t[i]))
+#         elif(t[i]=='A'):
+#               total=total+(l1[i]*10)
+#         elif(t[i]=='B'):
+#             total=total+(l1[i]*11)
+#         elif(t[i]=='C'):
+#             total=total+(l1[i]*12)
+#         elif(t[i]=='D'):
+#             total=total+(l1[i]*13)
+#         elif(t[i]=='E'):
+#             total=total+(l1[i]*14)
+#         elif(t[i]=='F'):
+#             total=total+(l1[i]*15)
+# print(total)
+
+# **************Question 51 ****************
+# write a python program to print pascal triangle upto n rows.
