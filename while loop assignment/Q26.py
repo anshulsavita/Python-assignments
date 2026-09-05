@@ -548,3 +548,14 @@
 
 # **************Question 51 ****************
 # write a python program to print pascal triangle upto n rows.
+n = int(input("Enter number of rows: "))
+previous = []
+for i in range(n):
+    row = [1]
+    for j in range(len(previous) - 1):
+        row.append(previous[j] + previous[j + 1])
+    if i > 0:
+        row.append(1)
+    print(row)
+    previous = row
+
