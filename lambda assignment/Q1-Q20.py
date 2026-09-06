@@ -233,18 +233,12 @@
 # Names:
 # N KAR
 
-# l=[]
-# n=int(input("Enter number of student:"))
-# for i in range(0,n):
-#     t=[]
-#     name=input("Enter name:")
-#     grade=int(input("Enter Grade:"))
-#     t.append(name)
-#     t.append(grade)
-#     l.append(t)
-# grades = sorted(set(map(lambda x: x[1],l)))
-# print(grades)
-# sl = grades[-2]
+# l=[['S ROY', 1.0], ['B BOSE', 3.0], ['N KAR', 2.0], ['C DUTTA', 1.0], ['G GHOSH', 1.0]]
+# grade=sorted(set(map(lambda a:a[1],l)))
+# print(f"Grade: {grade[-2]}")
+# for i in l:
+#     if(i[1]==grade[-2]):
+#         print(f"Name: {i[0]}")
 
 # print("Second lowest grade:", sl)
 # print("Names:")
