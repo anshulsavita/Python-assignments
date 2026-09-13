@@ -16,12 +16,10 @@
 # Result:
 # 16
 
-# l=['Anshul', 'rahul', 'Aman', 'rohit']
-# k=list(filter(lambda a: a[0].isupper(),l))
-# c=0
-# for i in k:
-#     c=c+len(i)
-# print(c)
+l=['Anshul','Rohit','ashwini','Suhani','Rahul']
+k1=list(filter(lambda a: a[0].isupper(),l))
+k2=list(map(lambda a: len(a),k1))
+print(f"Sum: {sum(k2)}")
 
 # ***************Question 23 **********
 # Write a Python program to calculate the sum of the positive and negative numbers of a given list of numbers using lambda function.  
