@@ -24,6 +24,8 @@ Write a SQL query to display three numbers in three columns.
 # *************Question 4 *************
 Write a SQL query to display the sum of two numbers 10 and 15 from the RDBMS server.
 
+    - select 10 + 15 as sum
+
 # *************Question 5 ************
 Write an SQL query to display the result of an arithmetic expression. 
 
@@ -131,15 +133,65 @@ Sample table: nobel_win
 
     - select Year,Subject,Winner,country,category from nobel_win where Subject not like 'P%' order by year desc,winner
 
-# **************Question 24 *************
+# **************Question 24 *************incomplete....
 From the following table, write a SQL query to find the details of 1970 Nobel Prize winners. Order the results by subject, ascending except for 'Chemistry' and ‘Economics’ which will come at the end of the result set. Return year, subject, winner, country, and category.  
 Sample table: nobel_win
 
-    - 
+    - SELECT year,Subject,winner,country,category FROM nobel_win where year = 1970 order by subject
 
+# **************Question 25 *************
+From the following table, write a SQL query to select a range of products whose price is in the range Rs.200 to Rs.600. Begin and end values are included. Return pro_id, pro_name, pro_price, and pro_com.  
+Sample table: item_mast
 
+    - select * from item_mast where pro_price between 200 and 600
 
+# **************Question 26 ***********
+From the following table, write a SQL query to calculate the average price for a manufacturer code of 16. Return avg.  
+Sample table: item_mast
 
+    - select pro_com,avg(pro_price) from item_mast where pro_com=16  group by pro_com
+
+# *************Question 27 *************
+From the following table, write a SQL query to display the pro_name as 'Item Name' and pro_priceas 'Price in Rs.'  
+Sample table: item_mast
+
+    - select pro_name as 'Item Name', pro_price as 'Price in Rs.' from item_mast 
+
+# ************Question 28 ***********
+From the following table, write a SQL query to find the items whose prices are higher than or equal to $250. Order the result by product price in descending, then product name in ascending. Return pro_name and pro_price.  
+Sample table: item_mast
+
+    - select pro_name,pro_price from item_mast where pro_price>=250 order by pro_price desc, pro_name
+
+# **************Question 29 **********
+From the following table, write a SQL query to calculate average price of the items for each company. Return average price and company code. 
+Sample table: item_mast
+
+    - select avg(pro_price),pro_com from item_mast group by pro_com
+
+# **************Question 30 ************ 
+From the following table, write a SQL query to find the cheapest item(s). Return pro_name and, pro_price.  
+Sample table: item_mast
+
+    - select pro_name,PRO_PRICE from item_mast where pro_price = (select min(pro_price) from item_mast)
+
+# *************Question 31 ************
+From the following table, write a SQL query to find the unique last name of all employees. Return emp_lname.  
+Sample table: emp_details
+
+    - select EMP_LNAME from emp_details group by EMP_LNAME
+
+# **************Question 32 ************
+From the following table, write a SQL query to find the details of employees whose last name is 'Snares'. Return emp_idno, emp_fname, emp_lname, and emp_dept.  
+Sample table: emp_details
+
+    - select * from emp_details where emp_lname='Snares'
+
+# *************Question 33 ************
+From the following table, write a SQL query to retrieve the details of the employees who work in the department 57. Return emp_idno, emp_fname, emp_lname and emp_dept..  
+Sample table: emp_details
+
+    - select * from emp_details where emp_dept = 57
 
 
 
