@@ -1,4 +1,5 @@
 '''
+Question left --> 24
 # *************Question 1 ************ 
 Write a SQL statement that displays all the information about all salespeople.
 
