@@ -7,8 +7,11 @@ Show all the orderid,customername which ordered ‘Tofu’ product
 where orders.CustomerID=customers.CustomerID and orders.ProductID=products.ProductID
 and products.ProductName='Tofu'
 
-# **************Question 2 ***************incomplete
+# **************Question 2 ***************
 Show all the supplier names which supplies ‘Tofu’ & ‘Ipoh Coffiee’
+
+    - select suppliers.SupplierID,suppliers.ContactName from suppliers
+where suppliers.SupplierID in (select supplierid from products where products.ProductName in ('tofu','ipoh coffee'))
 
 # ***************Question 3
 # list all the customers of city ‘London’ who ordered  products more then one time
