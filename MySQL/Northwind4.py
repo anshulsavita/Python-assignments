@@ -1,90 +1,72 @@
 '''
-*****Exercise simple Queries.
+# Exercise simple Queries.
 
 1.)
-select customers.*,orders.*,suppliers.* from customers,orders,suppliers 
+    - select customers.*,orders.*,suppliers.* from customers,orders,suppliers 
 
 2.)
-select * from customers order by customers.Country,customers.ContactName
+    - select * from customers order by customers.Country,customers.ContactName
 
 3.)
-select * from orders order by orders.OrderDate
+    - select * from orders order by orders.OrderDate
 
 4.)
-select count(*) from orders where Year(orders.OrderDate)='1997'
+    - select count(*) from orders where Year(orders.OrderDate)='1997'
 
 5.)
-select contactName from customers where contactTitle like '%manager' order by contactName
+    - select contactName from customers where contactTitle like '%manager' order by contactName
 
 6.)
-select * from orders where orders.OrderDate = '1997-5-19'
+    - select * from orders where orders.OrderDate = '1997-5-19'
 
 
-*****Exercise SQL Queries for JOINS
+# Exercise SQL Queries for JOINS
 
 1.)
-select * from orders,customers where Year(orders.OrderDate)='1996' and orders.CustomerID=customers.CustomerID
+    - select * from orders,customers where Year(orders.OrderDate)='1996' and orders.CustomerID=customers.CustomerID
 
 2.)
-select employees.city,count(employees.EmployeeID),count(customers.CustomerID) from employees
-left join customers on employees.city=customers.city group by employees.city 
+    - select employees.city,count(employees.EmployeeID),count(customers.CustomerID) from employees left join customers on employees.city=customers.city group by employees.city 
 
 3.)
-select customers.city,count(distinct employees.EmployeeID),count(distinct customers.CustomerID) from customers
-left join employees on employees.city=customers.city group by customers.city 
+select customers.city,count(distinct employees.EmployeeID),count(distinct customers.CustomerID) from customers left join employees on employees.city=customers.city group by customers.city 
 
 4.)incomplete...
 
-*********Exercise SQL Queries for having.
+# Exercise SQL Queries for having.
 
 1.)
-select orders.OrderID,employees.FullName from orders,employees
-where orders.EmployeeID=employees.EmployeeID and orders.ShippedDate > orders.RequiredDate
+select orders.OrderID,employees.FullName from orders,employees where orders.EmployeeID=employees.EmployeeID and orders.ShippedDate > orders.RequiredDate
 
 2.)
-select products.ProductID,sum(orders.Quantity) from orders,products 
-where orders.ProductID=products.ProductID group by products.ProductID 
-having sum(orders.Quantity)<200
+select products.ProductID,sum(orders.Quantity) from orders,products where orders.ProductID=products.ProductID group by products.ProductID having sum(orders.Quantity)<200
 
 3.)
-select customers.CustomerID,count(*) from orders,customers where orders.CustomerID=customers.CustomerID 
-and orders.OrderDate>='1996-12-31' group by customers.CustomerID 
-having count(*)>15
+select customers.CustomerID,count(*) from orders,customers where orders.CustomerID=customers.CustomerID and orders.OrderDate>='1996-12-31' group by customers.CustomerID having count(*)>15
 
-********Exercise SQL Inserting Recors
+# Exercise SQL Inserting Recors
 
 1.)
-insert into employees(LastName,FirstName,Title,TitleofCourtesy,Birthdate,
-HireDate,City,Region,PostalCode,Country,HomePhone,ReportsTo) 
-values('Savita','Anshul','President','Mr.','2006-09-29','2026-08-27','Gwalior',
-'WA',474001,'India','9301579572',2)
+insert into employees(LastName,FirstName,Title,TitleofCourtesy,Birthdate,HireDate,City,Region,PostalCode,Country,HomePhone,ReportsTo) values('Savita','Anshul','President','Mr.','2006-09-29','2026-08-27','Gwalior','WA',474001,'India','9301579572',2)
 
 2.)
-insert into orders(CustomerID,EmployeeID,OrderDate,RequiredDate) 
-values('AROUT',1,'2023-12-04','2024-01-05')
+insert into orders(CustomerID,EmployeeID,OrderDate,RequiredDate) values('AROUT',1,'2023-12-04','2024-01-05')
 
 3.)
-insert into order_Details(OrderId,ProductId,UnitPrice,Quantity,Discount) 
-values(11077,1,7,2,0)
+insert into order_Details(OrderId,ProductId,UnitPrice,Quantity,Discount) values(11077,1,7,2,0)
 
-*********Exercise SQL Updating Records
+# Exercise SQL Updating Records
 
 1.)
-update employees 
-set HomePhone=9039290305
-where employees.EmployeeID=10
+update employees set HomePhone=9039290305 where employees.EmployeeID=10
 
 2.)
-update order_details
-set Quantity=2*Quantity
-where OrderId=11077 and productId=1
+update order_details set Quantity=2*Quantity where OrderId=11077 and productId=1
 
 3.)
-update order_details
-set Quantity = 2 * Quantity
-where OrderID IN (select OrderID from Orders where EmployeeID = 10)
+update order_details set Quantity = 2 * Quantity where OrderID IN (select OrderID from Orders where EmployeeID = 10)
 
-Exercise SQL Deleting Records
+# Exercise SQL Deleting Records
 
 1.)
 delete from employees
@@ -96,25 +78,19 @@ where employeeid=10
 select sum(orders.Total_Amount) from orders where year(orders.OrderDate)=1997
 
 2.)
-select customers.CustomerID,customers.ContactName,sum(orders.Total_Amount) from orders,customers
-where orders.CustomerID=customers.CustomerID group by customers.CustomerID
+select customers.CustomerID,customers.ContactName,sum(orders.Total_Amount) from orders,customers where orders.CustomerID=customers.CustomerID group by customers.CustomerID
 
 3.)
-select products.ProductID,products.ProductName,sum(orders.Total_Amount) from products,orders
-where orders.ProductID=products.ProductID group by products.ProductID order by sum(orders.Total_Amount) desc limit 1
+select products.ProductID,products.ProductName,sum(orders.Total_Amount) from products,orders where orders.ProductID=products.ProductID group by products.ProductID order by sum(orders.Total_Amount) desc limit 1
 
 4.) incomplte...query cumplete hai bas view nahi banaya hai, kaise banate hai nahi pata.
-select customers.CustomerID,customers.ContactName,sum(orders.Total_Amount) from orders,customers
-where orders.CustomerID=customers.CustomerID group by customers.CustomerID
+select customers.CustomerID,customers.ContactName,sum(orders.Total_Amount) from orders,customers where orders.CustomerID=customers.CustomerID group by customers.CustomerID
 
 5.)
-select customers.CustomerID,customers.ContactName,sum(orders.Total_Amount) from orders,customers
-where orders.CustomerID=customers.CustomerID and customers.Country='UK' group by customers.CustomerID having sum(orders.Total_Amount)>1000
+select customers.CustomerID,customers.ContactName,sum(orders.Total_Amount) from orders,customers where orders.CustomerID=customers.CustomerID and customers.Country='UK' group by customers.CustomerID having sum(orders.Total_Amount)>1000
 
 6.)
-select customers.CustomerID,customers.ContactName,customers.Country,sum(orders.Total_Amount),
-sum(case when year(orders.OrderDate) = 1997 then orders.Total_Amount ELSE 0 END) AS TotalIn1997 
-from orders,customers where orders.CustomerID=customers.CustomerID group by customers.CustomerID
+select customers.CustomerID,customers.ContactName,customers.Country,sum(orders.Total_Amount),sum(case when year(orders.OrderDate) = 1997 then orders.Total_Amount ELSE 0 END) AS TotalIn1997 from orders,customers where orders.CustomerID=customers.CustomerID group by customers.CustomerID
 
 *********Querying the database - part 1
 
@@ -122,8 +98,7 @@ from orders,customers where orders.CustomerID=customers.CustomerID group by cust
 select categories.CategoryName,categories.Description from categories
 
 2.)
-select customers.ContactName,customers.CustomerID,customers.CompanyName from customers 
-where customers.city='London'
+select customers.ContactName,customers.CustomerID,customers.CompanyName from customers where customers.city='London'
 
 3.)
 select * from suppliers where suppliers.Fax is not null
@@ -132,45 +107,37 @@ select * from suppliers where suppliers.Fax is not null
 select orders.CustomerID from orders where orders.RequiredDate between '1997-1-1' and '1998-1-1' and orders.Freight<100
 
 5.)
-select customers.CompanyName,customers.ContactName from customers 
-where customers.ContactTitle='Owner' and customers.Country in ('Mexico','Sweden','Germany')
+select customers.CompanyName,customers.ContactName from customers where customers.ContactTitle='Owner' and customers.Country in ('Mexico','Sweden','Germany')
 
 6.)
 select products.ProductID,products.ProductName from products where products.Discontinued=1
 
 7.)
-select categories.CategoryName,categories.Description from categories 
-where categories.CategoryName like 'Co%'
+select categories.CategoryName,categories.Description from categories where categories.CategoryName like 'Co%'
 
 8.)
-select CompanyName,City,Country,PostalCode from suppliers 
-where suppliers.Address like '%rue%' order by suppliers.CompanyName
+select CompanyName,City,Country,PostalCode from suppliers where suppliers.Address like '%rue%' order by suppliers.CompanyName
 
 9.)
 select products.ProductID,sum(products.UnitsInStock) from products group by products.ProductID
 
 10.) ...incomplete 
-select customers.ContactName,customers.Address from customers,orders 
-where orders.CustomerID=customers.CustomerID and orders.ShipName='Speedy Express'
+select customers.ContactName,customers.Address from customers,orders where orders.CustomerID=customers.CustomerID and orders.ShipName='Speedy Express'
 
 11.)
 select suppliers.CompanyName,suppliers.ContactName,suppliers.ContactTitle,suppliers.Region from suppliers
 
 12.)
-select products.ProductName from products,categories where products.CategoryID=categories.CategoryID and
-categories.CategoryName='condiments'
+select products.ProductName from products,categories where products.CategoryID=categories.CategoryID and categories.CategoryName='condiments'
 
 13.)
-select customers.ContactName from customers where customers.CustomerID not in 
-(select orders.CustomerID from orders)
+select customers.ContactName from customers where customers.CustomerID not in (select orders.CustomerID from orders)
 
 14.)
 insert into orders value('10688', 'VAFFE', '4', '2024-03-16', '2024-03-30', '2024-03-22', '3', '299.09', 'Amazon', 'Smagsloget 45', 'rhus', NULL, '8200', 'Denmark', '34', '14', '14', '0', '196')
 
 15.)
-update orders
-set Shipname='Amazon Prime Shipping'
-where shipname='Amazon'
+update orders set Shipname='Amazon Prime Shipping' where shipname='Amazon'
 
 16.)
 incomplete because i dont have shippers table..
@@ -186,8 +153,7 @@ insert into orders value('11077', 'AGSKB', '1', '2024-10-19', '2024-11-16', NULL
 delete from orders where ProductID=6 and CustomerID='AGSKB'
 
 20.)
-select sum(products.UnitsInStock) as TotalUnits from products group by products.ProductID
-having TotalUnits>100 
+select sum(products.UnitsInStock) as TotalUnits from products group by products.ProductID having TotalUnits>100 
 
 *************Querying the database - part 2
 
@@ -195,38 +161,131 @@ having TotalUnits>100
 select employees.FullName,employees.Address,employees.city,employees.Region from employees
 
 2.)
-select employees.FullName,employees.Address,employees.city,employees.Region
-from employees where employees.Country='USA'
+select employees.FullName,employees.Address,employees.city,employees.Region from employees where employees.Country='USA'
 
 3.)
-select employees.FullName,employees.Address,employees.city,employees.Region
-from employees where DATEDIFF(now(),employees.BirthDate)>50
+select employees.FullName,employees.Address,employees.city,employees.Region from employees where DATEDIFF(now(),employees.BirthDate)>50
 
 4.)
     i.)
-select employees.FullName,employees.Address,employees.city,employees.Region
-from employees,orders where orders.ShipCountry='Belgium' and orders.EmployeeID=employees.EmployeeID group by employees.EmployeeID
+select employees.FullName,employees.Address,employees.city,employees.Region from employees,orders where orders.ShipCountry='Belgium' and orders.EmployeeID=employees.EmployeeID group by employees.EmployeeID
 
     ii.)
-select employees.FullName,employees.Address,employees.city,employees.Region
-FROM employees
-inner join orders
-on orders.EmployeeID=employees.EmployeeID
-where  orders.ShipCountry='Belgium' group by employees.EmployeeID
+select employees.FullName,employees.Address,employees.city,employees.Region FROM employees inner join orders on orders.EmployeeID=employees.EmployeeID where  orders.ShipCountry='Belgium' group by employees.EmployeeID
 
 5.)
+    - select employees.FullName,customers.ContactName from orders,employees,customers where orders.CustomerID=customers.CustomerID and orders.EmployeeID=employees.EmployeeID and customers.CompanyName='Alfreds Futterkiste' group by employees.EmployeeID,customers.CustomerID
+
+# Question 6
+Select the title and name of employees who have sold at least one of the products ‘Gravad Lax’ or ‘Mishi Kobe Niku’.
+
+    - select employees.Title,employees.FullName from employees,orders,products where orders.EmployeeID=employees.EmployeeID and orders.ProductID=products.ProductID and products.ProductName in ('Gravad Lax','Mishi Kobe Niku') group by employees.EmployeeID
+
+# Question 7
+Select the name and title of employees and the name and title of the person to which they refer (or null for the latter values if they don’t refer to another employee).
+
+    - select e.FullName as EmployeeName,e.Title as EmployeeTitle,m.FullName as ManagerName,m.Title as ManagerTitle from employees e left join employees m on e.ReportsTo = m.EmployeeID
+
+# Question 8
+Select the customer name, the product name and the supplier name for customers who live in London and suppliers whose name is ‘Pavlova, Ltd.’ or ‘Karkki Oy’
+
+    - select customers.ContactName,products.ProductName,suppliers.ContactName from customers,products,suppliers,orders where orders.CustomerID=customers.CustomerID and orders.ProductID=products.ProductID and products.SupplierID=suppliers.SupplierID and customers.City='London' and suppliers.CompanyName in ('Pavlova, Ltd.','Karkki Oy')
+
+# Question 9 
+Select the name of products that were bought or sold by people who live in London. Write two versions of the query, with and without union
+
+    - select products.ProductName from products,orders,customers where orders.ProductID=products.ProductID and orders.CustomerID=customers.CustomerID and customers.city='London'
+    Union
+    select products.ProductName from products,orders,employees where orders.ProductID=products.ProductID and orders.employeeid=employees.employeeid and employees.city='London'
+
+    - select products.ProductName from products,orders,customers,employees
+    where orders.ProductID=products.ProductID and orders.CustomerID=customers.CustomerID and employees.EmployeeID=orders.EmployeeID
+    and (customers.city='London' or employees.City='London')
 
 
 
+# Question 10
+10.	Select the names of employees who are strictly older than: (a) an employee who lives in London. (b) any employee who lives in London.
 
+    a.)
+        - select employees.BirthDate from employees where employees.BirthDate>(select max(employees.BirthDate) from employees where employees.City='London')
 
+    b.)
+        - select employees.EmployeeID from employees where employees.BirthDate>(select min(employees.BirthDate) from employees where employees.City='London')
 
+# Question 11
+Select the name of employees who work longer than any employee of London
 
+    - select fullname from employees where hiredate<(select max(hiredate)from employees where city = 'london')
 
+# Question 12
+Select the name of employees and the city where they live for employees who have sold to customers in the same city
 
+    - select employees.fullname, employees.city from employees,orders,customers where employees.employeeid = orders.employeeid and orders.customerid = customers.customerid and employees.city = customers.city group by employees.EmployeeID
 
+# Question 13
+Select the name of customers who have not purchased any product
 
+    - select customers.ContactName from customers where customers.CustomerID not in (select orders.CustomerID from orders)
 
+# Question 14
+Select the name of customers who bought all products with price less than 5
+
+    - select customers.ContactName from customers where customers.CustomerID in (select orders.CustomerID from orders where orders.ProductID in (select products.ProductID from products where products.UnitPrice<5))
+
+# Question 15 ***incomplete
+15.	Select the name of the products sold by all employees
+
+# Question 16 ** incomplete
+16.	Select the name of customers who bought all products purchased by the customer whose identifier is ‘LAZYK’
+
+# Question 17 ** incomplete
+17.	Select the name of customers who bought exactly the same products as the customer whose identifier is ‘LAZYK’
+
+# Question 18
+18.	Select the average price of products by category.
+
+    -  select categoryid, avg(unitprice) from products group by categoryid;
+
+# Question 19
+19.	Given the name of the categories and the average price of products in each category.
+
+    - select categories.categoryname, avg(products.unitprice) from categories join products on categories.categoryid = products.categoryid group by categories.categoryid, categories.categoryname
+
+# Question 20
+20.	Select the identifier and the name of the companies that provide more than 3 products.
+
+    - select suppliers.supplierid, suppliers.companyname from suppliers join products on suppliers.supplierid = products.supplierid group by suppliers.supplierid, suppliers.companyname having count(products.productid) > 3
+
+# Question 21
+21.	Select the identifier, name, and number of orders of employees, ordered by the employee identifier.
+
+    - select employees.employeeid, employees.FullName as name, count(orders.orderid) from employees left join orders on employees.employeeid = orders.employeeid group by employees.employeeid, employees.firstname, employees.lastname order by employees.employeeid
+
+# Question 22
+22.	For each employee give the identifier, name, and the number of distinct products sold, ordered by the employee identifier.
+
+    - select employees.employeeid, employees.FullName, count(distinct orders.productid) as number_of_distinct_products from employees left join orders on employees.employeeid = orders.employeeid group by employees.employeeid, employees.firstname, employees.lastname order by employees.employeeid
+
+# Question 23
+23.	Select the identifier, name, and total sales of employees, ordered by the employee identifier
+
+    - select employees.employeeid, employees.FullName, sum(orders.total_amount) as total_sales from employees left join orders on employees.employeeid = orders.employeeid group by employees.employeeid, employees.firstname, employees.lastname order by employees.employeeid
+
+# Question 24
+24.	Select the identifier, name, and total sales of employees, ordered by the employee identifier for employees who have sold more than 70 different products
+
+    - select employees.employeeid, employees.fullname, sum(orders.total_amount) as total_sales from employees join orders on employees.employeeid = orders.employeeid group by employees.employeeid, employees.fullname having count(distinct orders.productid) > 70 order by employees.employeeid
+
+# Question 25
+25.	Select the names of employees who sell the products of more than 7 suppliers
+
+    - select employees.fullname from employees join orders on employees.employeeid = orders.employeeid join products on orders.productid = products.productid group by employees.employeeid, employees.fullname having count(distinct products.supplierid) > 7
+
+# Question 26
+26.	Select the customer name and the product name such that the quantity of this product bought by the customer in a single order is more than 5 times the average quantity of this product bought in a single order among all clients.
+
+    - select customers.contactname, products.productname from orders join customers on orders.customerid = customers.customerid join products on orders.productid = products.productid where orders.quantity > 5 * (select avg(orders.quantity) from orders where orders.productid = products.productid);
 
 
 
